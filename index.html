@@ -5,33 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad's Portfolio Website</title>
     <link rel="shortcut icon" href="./images/avatar.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/responsiveNavBarHomepage.css" />
   </head>
   <body>
     <header id="page_header">
-      <div id="LogoContainer">
-        <img
-          src="./images/avatar.png"
-          alt="Portfolio Avatar"
-          height="100"
-          width="100"
-        />
-        <span> <strong> Muhammad Naseem's Portfolio Website</strong></span>
-      </div>
+      <nav class="NavBar">
+        <div id="LogoContainer">
+          <div class="flex">
+            <img
+              src="./images/avatar.png"
+              alt="Portfolio Avatar"
+              height="100"
+              width="100"
+            />
+          </div>
+        </div>
+        <span class="flex">
+          <strong> Muhammad Naseem's Portfolio Website</strong></span
+        >
 
-      <div>
-        <blockquote>NEVER BACK DOWN NEVER WHAT</blockquote>
-      </div>
-      <div>
-        <nav id="NavBar">
-          <a href="/index.html" class="NavOption"> Home </a>
-          <a href="./html/my_Resume.html">Resume</a>
-          <a href="./html/my_Fun_Facts.html">Fun Facts About Me</a>
-        </nav>
-      </div>
+        <div class="page-heading">
+          <div class="flex">
+            <blockquote>NEVER BACK DOWN NEVER WHAT</blockquote>
+          </div>
+        </div>
+
+        <div class="flex">
+          <ul class="nav-links">
+            <!-- HAMBURGER Menu icon and checkbox hack -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+              <li class="Home">
+                <a href="/index.html"> Home </a>
+                <!-- gonna use these two for hover pseudo class -->
+
+                <ul class="dropdown">
+                  <li><a href="./html/my_Resume.html">Resume</a></li>
+                  <li>
+                    <a href="./html/my_Fun_Facts.html">Fun Facts About Me</a>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <!--<h2> <span> <strong> Muhammad Naseem's Portfolio Website</strong></span> </h2>-->
+
     <hr />
-    <main>
+    <main class="page-subheading">
       <p>
         <!-- Elevator Pitch -->
         Hello, My name is Muhammad Naseem. I am a Results-driven software
@@ -43,9 +69,10 @@
         development.
       </p>
       <p>Check out more about me through my resume and fun facts page!</p>
+
+      <label for="file">Progress to Degree:</label>
+      <progress id="file" value="99" max="100">32%</progress>
     </main>
-    <label for="file">Progress to Degree:</label>
-    <progress id="file" value="99" max="100">32%</progress>
     <hr />
     <footer>
       <!-- Social Media / Contact -->
